@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  counter = 0;
   constructor() { }
 
   ngOnInit() {
   }
-
+  increase() {
+    this.counter++;
+  }
+  reset() {
+    this.counter = 0;
+  }
+  increaseByFive() {
+    this.counter += 5;
+  }
+  decreaseByFive() {
+    this.counter -= 5;
+  }
 }

@@ -1,0 +1,10 @@
+
+<button (click)="krumplinovelo()" id="teve">Kurmpli + 1</button>
+<button (click)="krumplicsokkento()">Krumpli - 1</button>
+<button (click)="krumpliRESET()">Krumpli reset</button>
+<p> {{ krumpliszamlalo }} </p>
+
+<button (click)="mutatas()">{{ szoveg }}</button>
+<div *ngIf = "megjelenit">
+  <app-krumpliertekek [kurmpli]="krumpliszamlalo"></app-krumpliertekek>
+</div>

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from ''
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +6,11 @@ import { DataService } from ''
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  @Output()
+  e = new EventEmitter();
+
   counter = 0;
-  constructor(private service: DataService) { }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -25,6 +27,6 @@ export class HomeComponent implements OnInit {
     this.counter -= 5;
   }
   sent() {
-
+    this.e.emit(this.counter);
   }
 }

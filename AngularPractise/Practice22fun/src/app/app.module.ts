@@ -8,7 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
 import { ListComponent } from './list/list.component';
-import { DataService } from './'
+import { DisplayCounterComponent } from './display-counter/display-counter.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +18,14 @@ import { DataService } from './'
     ContactComponent,
     HomeComponent,
     DataComponent,
-    ListComponent
+    ListComponent,
+    DisplayCounterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

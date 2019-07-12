@@ -7,6 +7,6 @@
 <button (click)="decreaseByFive()">Click here for -5</button>
 <button (click)="reset()">Reset</button>
 <br>
-<label>{{counter}}</label>
+<label [ngStyle] = "{'color': counter < 10 ? 'black' : 'purple' }">{{counter}}</label>
 <br>
 <button (click)="sent()">Send data to listing</button>

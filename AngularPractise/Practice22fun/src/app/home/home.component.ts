@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   @Output()
   e = new EventEmitter();
 
+  status = 'false';
   counter = 0;
   constructor() { }
 

@@ -1,10 +1,11 @@
 <br>
-<button (click)="increase()">Click here for +1</button>
-<button (click)="increaseByFive()">Click here for +5</button>
-<button (click)="decreaseByFive()">Click here for -5</button>
-<p [ngClass] = "{'text-red': counter >= 5, 'text-blue': counter < 5}">Number increase or decrease.</p>
-<button (click)="reset()">Reset</button>
+  <button type="button" class="btn btn-outline-dark" (click)="increase()">Click here for +1</button>
+<button type="button" class="btn btn-outline-success" (click)="increaseByFive()">Click here for +5</button>
+<button type="button" class="btn btn-outline-warning" (click)="decreaseByFive()">Click here for -5</button>
+
+<p [ngClass] = "{'text-red': counter > 5, 'text-blue': counter <= 5}">Until 5 blue, after it's red..</p>
+<button type="button" class="btn btn-outline-primary" (click)="reset()">Reset</button>
 <br>
 <label [ngStyle] = "{'color': counter < 10 ? 'black' : 'purple' }">{{counter}}</label>
 <br>
-<button (click)="sent()">Send data to listing</button>
+<button type="button" class="btn btn-outline-danger" (click)="sent()">Send data to listing</button>

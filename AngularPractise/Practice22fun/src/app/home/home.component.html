@@ -1,10 +1,8 @@
-<p>
-  home works!
-</p>
-
+<br>
 <button (click)="increase()">Click here for +1</button>
 <button (click)="increaseByFive()">Click here for +5</button>
 <button (click)="decreaseByFive()">Click here for -5</button>
+<p [ngClass] = "{'text-red': counter >= 5, 'text-blue': counter < 5}">Number increase or decrease.</p>
 <button (click)="reset()">Reset</button>
 <br>
 <label [ngStyle] = "{'color': counter < 10 ? 'black' : 'purple' }">{{counter}}</label>

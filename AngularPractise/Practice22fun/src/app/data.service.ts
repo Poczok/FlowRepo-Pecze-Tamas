@@ -5,14 +5,12 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  myMethod$: Observable<any>;
-  private myMethodSubject = new Subject<any>();
-  constructor() {
-    this.myMethod$ = this.myMethodSubject.asObservable();
-  }
+  country = 'Magyarország';
+  city = '6723 Szeged';
+  address = 'Szilléri sor 1/30';
+  telephone = '06702396174';
 
-  myMethod(data) {
-    console.log(data);
-    this.myMethodSubject.next(data);
+getMockedData() {
+  return [this.country, this.city, this.address, this.telephone];
 }
 }

@@ -16,7 +16,9 @@ public class StartupRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         User u1 = new User("Pecze Tamas");
+        User u2 = new User("Almadi Eva");
 
         userRepository.save(u1);
+        userRepository.save(u2);
     }
 }

@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        String startNumber = "12";
+        String startNumber = "1";
         for(int i = 0; i < 10; i++) {
             startNumber = lookAndSay(startNumber);
             System.out.println(lookAndSay(startNumber));
@@ -17,7 +17,8 @@ public class Main {
                 startValue = i;
             }
         }
-        sb.append(s.substring(startValue,s.length()).length()).append(s.charAt(startValue));
+        sb.append(s.substring(startValue,s.length()).length());
+        sb.append(s.charAt(startValue));
         return sb.toString();
     }
 }
